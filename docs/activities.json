@@ -4,7 +4,7 @@
     "start": "2021-01-01",
     "end": "2026-11-02"
   },
-  "syncedAt": "2026-11-02 23:13:34 +08:00",
+  "syncedAt": "2026-11-02 23:29:44 +08:00",
   "activities": [
     {
       "date": "2026-11-02",
@@ -5802,7 +5802,7 @@
             }
           },
           {
-            "name": "后轮（米其林PowerCup）",
+            "name": "后胎（米其林PowerCup）",
             "type": "Tyre",
             "distanceKm": 963.37,
             "replacement": {
@@ -5812,7 +5812,7 @@
             }
           },
           {
-            "name": "前轮（米其林PowerCup）",
+            "name": "前胎（米其林PowerCup）",
             "type": "Tyre",
             "distanceKm": 3395.91,
             "replacement": {
@@ -5834,13 +5834,13 @@
           {
             "name": "RCR锁鞋",
             "type": "CyclingShoes",
-            "distanceKm": 11258.49,
+            "distanceKm": 9058,
             "replacement": null
           },
           {
             "name": "左",
             "type": "Cleats",
-            "distanceKm": 11258.49,
+            "distanceKm": 9058,
             "replacement": null
           },
           {

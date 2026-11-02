@@ -4,7 +4,7 @@
     "start": "2021-01-01",
     "end": "2026-11-02"
   },
-  "syncedAt": "2026-11-02 18:21:39 +08:00",
+  "syncedAt": "2026-11-02 23:13:34 +08:00",
   "activities": [
     {
       "date": "2026-11-02",
@@ -5789,8 +5789,67 @@
       {
         "name": "迪卡侬EDRcf V2",
         "type": "Bike",
-        "distanceKm": 11636.878,
-        "components": []
+        "distanceKm": 11636.87,
+        "components": [
+          {
+            "name": "Rival飞轮",
+            "type": "Cassette",
+            "distanceKm": 11542.11,
+            "replacement": {
+              "status": "missing-reminder",
+              "date": null,
+              "distanceKm": null
+            }
+          },
+          {
+            "name": "后轮（米其林PowerCup）",
+            "type": "Tyre",
+            "distanceKm": 963.37,
+            "replacement": {
+              "status": "missing-reminder",
+              "date": null,
+              "distanceKm": null
+            }
+          },
+          {
+            "name": "前轮（米其林PowerCup）",
+            "type": "Tyre",
+            "distanceKm": 3395.91,
+            "replacement": {
+              "status": "missing-reminder",
+              "date": null,
+              "distanceKm": null
+            }
+          },
+          {
+            "name": "Rival链条",
+            "type": "Chain",
+            "distanceKm": 11542.11,
+            "replacement": {
+              "status": "missing-reminder",
+              "date": null,
+              "distanceKm": null
+            }
+          },
+          {
+            "name": "RCR锁鞋",
+            "type": "CyclingShoes",
+            "distanceKm": 11258.49,
+            "replacement": null
+          },
+          {
+            "name": "左",
+            "type": "Cleats",
+            "distanceKm": 11258.49,
+            "replacement": null
+          },
+          {
+            "name": "右",
+            "type": "Cleats",
+            "distanceKm": 0,
+            "replacement": null
+          }
+        ]
       }
     ],
     "retired": []

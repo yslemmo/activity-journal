@@ -149,7 +149,7 @@ export function normalizeGear(records) {
 }
 
 export async function readConfig(configPath = join(homedir(), '.config/interval-icu/config.json')) {
-  if (process.env.INTERVALS_ICU_API_KEY && configPath === join(homedir(), '.config/interval-icu/config.json')) return {INTERVALS_ICU_API_KEY:process.env.INTERVALS_ICU_API_KEY};
+  if (process.env.INTERVALS_ICU_API_KEY && configPath === join(homedir(), '.config/interval-icu/config.json')) return {INTERVALS_ICU_API_KEY:process.env.INTERVALS_ICU_API_KEY, ...(process.env.STRAVA_ATHLETE_ID ? {STRAVA_ATHLETE_ID:process.env.STRAVA_ATHLETE_ID} : {})};
   let config;
   try {
     config = JSON.parse(await readFile(configPath, 'utf8'));

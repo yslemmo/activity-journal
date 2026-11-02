@@ -9,15 +9,6 @@ on:
         description: Fetch all historical activities
         type: boolean
         default: false
-  push:
-    branches: [main]
-    paths:
-      - 'docs/**'
-      - 'data/**'
-      - 'scripts/**'
-      - 'workers/**'
-      - 'package*.json'
-      - '.github/workflows/site.yml'
 
 concurrency:
   group: activity-journal-site
@@ -42,6 +33,7 @@ jobs:
     env:
       SYNC_WORKER_URL: ${{ secrets.SYNC_WORKER_URL }}
       SYNC_FULL: ${{ inputs.full || false }}
+      STRAVA_ATHLETE_ID: "136709829"
     steps:
       # Checkout latest main after waiting for concurrency, not the event's stale SHA.
       - uses: actions/checkout@v4
@@ -110,28 +102,3 @@ jobs:
           SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: node scripts/site-sync.mjs fail
 
-  notify:
-    needs: update-and-deploy
-    if: >-
-      always() && github.ref == 'refs/heads/main' &&
-      (needs.update-and-deploy.result == 'failure' ||
-       needs.update-and-deploy.result == 'cancelled' ||
-       (needs.update-and-deploy.result == 'success' && needs.update-and-deploy.outputs.page_url != ''))
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-    permissions:
-      contents: read
-      actions: read
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ needs.update-and-deploy.outputs.deployed_commit || github.sha }}
-          persist-credentials: false
-      - name: Email website update result
-        env:
-          SMTP_PASSWORD: ${{ secrets.SITE_SMTP_PASSWORD }}
-          SITE_URL: ${{ needs.update-and-deploy.outputs.page_url || 'https://pircate.github.io/activity-journal/' }}
-          DEPLOYED_COMMIT: ${{ needs.update-and-deploy.outputs.deployed_commit || github.sha }}
-          UPDATE_RESULT: ${{ needs.update-and-deploy.result }}
-          GITHUB_TOKEN: ${{ github.token }}
-        run: python3 scripts/notify-site.py

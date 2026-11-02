@@ -33,7 +33,6 @@ jobs:
     env:
       SYNC_WORKER_URL: ${{ secrets.SYNC_WORKER_URL }}
       SYNC_FULL: ${{ inputs.full || false }}
-      STRAVA_ATHLETE_ID: "136709829"
     steps:
       # Checkout latest main after waiting for concurrency, not the event's stale SHA.
       - uses: actions/checkout@v4
@@ -53,6 +52,7 @@ jobs:
       - name: Update and build snapshot
         if: steps.claim.outputs.skip != 'true'
         env:
+          STRAVA_ATHLETE_ID: "136709829"
           INTERVALS_ICU_API_KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
           SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
           STRAVA_CLIENT_ID: ${{ secrets.STRAVA_CLIENT_ID }}

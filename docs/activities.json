@@ -4,8 +4,19 @@
     "start": "2021-01-01",
     "end": "2026-11-02"
   },
-  "syncedAt": "2026-11-02 17:39:45 +08:00",
+  "syncedAt": "2026-11-02 18:21:39 +08:00",
   "activities": [
+    {
+      "date": "2026-11-02",
+      "startTime": "17:51:15",
+      "sport": "Run",
+      "distanceKm": 5.0281,
+      "durationSeconds": 1474,
+      "elevationGain": 3,
+      "trainingLoad": 35,
+      "stravaUrl": "https://www.strava.com/activities/20826835210",
+      "activityUrl": "https://intervals.icu/activities/i204706930"
+    },
     {
       "date": "2026-10-31",
       "startTime": "17:46:58",

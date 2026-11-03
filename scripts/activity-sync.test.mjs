@@ -38,3 +38,13 @@ test('开始时间倒序，未来活动排除，缺失负荷保留历史且不�
   assert.deepEqual(result.data.activities.map(a=>a.startTime),['17:00:00','08:00:00']);
   assert.equal(result.data.activities[1].distanceKm,null);assert.equal(result.data.activities[1].trainingLoad,30);
 });
+
+
+test('用户确认的室内骑行在同步和历史保留时显示为虚拟骑行', () => {
+  const id = '20841382505';
+  const result = merge({stravaRecords:[record({id})]});
+  assert.equal(result.data.activities[0].sport, 'VirtualRide');
+  const retained = merge({previous:result.data, stravaRecords:[], intervalsRecords:[]});
+  assert.equal(retained.data.activities[0].sport, 'VirtualRide');
+  assert.equal(merge({stravaRecords:[record({id:'902'})]}).data.activities[0].sport, 'Ride');
+});

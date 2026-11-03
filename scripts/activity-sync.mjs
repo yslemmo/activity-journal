@@ -4,6 +4,9 @@ import {summarizeActivities} from '../docs/activity-data.mjs';
 import {normalizeStravaActivity, stravaId} from './strava-data.mjs';
 import {matchCorosStrengthSets} from './update-data.mjs';
 
+// 用户确认的室内骑行：保留 Strava 关联，覆盖网站展示分类。
+const sportOverrides = new Map([['https://www.strava.com/activities/20841382505', 'VirtualRide']]);
+
 export const unavailableId = id => createHash('sha256').update('strava:' + id).digest('hex');
 
 export function activityAssociations(previous, records, strengthSets = []) {
@@ -51,7 +54,7 @@ export function mergeActivities({previous, stravaRecords, intervalsRecords, coro
   for (const row of previous.activities) {
     const key = row.stravaUrl ?? row.activityUrl;
     if (!key || rows.has(key) || row.activityUrl && intervalRows.has(row.activityUrl)) throw new Error('历史活动标识缺失或重复');
-    const copy = {...row};
+    const copy = {...row, sport:sportOverrides.get(row.stravaUrl) ?? row.sport};
     if (row.sport === 'WeightTraining') copy.calories ??= null;
     rows.set(key, copy);
     if (row.activityUrl) intervalRows.set(row.activityUrl, {key, row:copy});
@@ -64,6 +67,7 @@ export function mergeActivities({previous, stravaRecords, intervalsRecords, coro
     if (seen.has(id)) throw new Error('Strava 活动标识重复');
     seen.add(id);
     const next = normalizeStravaActivity(record);
+    next.sport = sportOverrides.get(next.stravaUrl) ?? next.sport;
     if (next.date < window.oldest || next.date > window.end || Date.parse(record.start_date) >= window.before * 1000) continue;
     const activityUrl = byStrava.get(next.stravaUrl);
     const related = rows.get(next.stravaUrl), known = intervalRows.get(activityUrl)?.row;

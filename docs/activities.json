@@ -4,12 +4,12 @@
     "start": "2021-01-01",
     "end": "2026-11-04"
   },
-  "syncedAt": "2026-11-04 19:54:54 +08:00",
+  "syncedAt": "2026-11-04 21:06:33 +08:00",
   "activities": [
     {
       "date": "2026-11-04",
       "startTime": "18:19:58",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 53.15,
       "durationSeconds": 5397,
       "elevationGain": 0,
@@ -1393,7 +1393,7 @@
     {
       "date": "2026-04-21",
       "startTime": "19:29:52",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 40.1916,
       "durationSeconds": 4512,
       "elevationGain": 0,
@@ -1404,7 +1404,7 @@
     {
       "date": "2026-04-20",
       "startTime": "18:50:35",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 38.4681,
       "durationSeconds": 4385,
       "elevationGain": 0,
@@ -1522,7 +1522,7 @@
     {
       "date": "2026-04-09",
       "startTime": "19:52:01",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 41.470099999999995,
       "durationSeconds": 4300,
       "elevationGain": 0,
@@ -1533,7 +1533,7 @@
     {
       "date": "2026-04-08",
       "startTime": "19:51:04",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 36.0174,
       "durationSeconds": 3734,
       "elevationGain": 0,
@@ -1544,7 +1544,7 @@
     {
       "date": "2026-04-07",
       "startTime": "19:31:34",
-      "sport": "Ride",
+      "sport": "VirtualRide",
       "distanceKm": 31.1799,
       "durationSeconds": 4483,
       "elevationGain": 0,

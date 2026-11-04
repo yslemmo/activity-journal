@@ -70,3 +70,14 @@ test('按实际读限额等待，分段等待不超过一分钟，日限额超�
   const daily=createStravaClient({accessToken:'secret',clock:()=>current,fetchImpl:async()=>Response.json([row()],{headers:{'X-ReadRateLimit-Limit':'100,1000','X-ReadRateLimit-Usage':'1,1000'}})});
   await assert.rejects(daily.activities({before:20}),/限流等待超时/);
 });
+
+
+test('骑行标题包含 indoor 时归类为虚拟骑行，忽略大小写', () => {
+  for (const name of ['Indoor Cycling', 'Wahoo INDOOR ride', 'morning indoor']) {
+    assert.equal(normalizeStravaActivity(row({name})).sport, 'VirtualRide');
+  }
+  assert.equal(normalizeStravaActivity(row({name:'Morning Ride'})).sport, 'Ride');
+  assert.equal(normalizeStravaActivity(row({name:null})).sport, 'Ride');
+  assert.equal(normalizeStravaActivity(row({sport_type:'Run', name:'Indoor Run'})).sport, 'Run');
+  assert.equal(normalizeStravaActivity(row({sport_type:'VirtualRide', name:'Indoor Ride'})).sport, 'VirtualRide');
+});

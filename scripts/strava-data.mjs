@@ -19,7 +19,8 @@ export function normalizeStravaProfile(athlete) {
 
 export function normalizeStravaActivity(record) {
   const id = stravaId(record?.id);
-  const sport = record.sport_type;
+  const sport = record.sport_type === 'Ride' && typeof record.name === 'string' && /indoor/i.test(record.name)
+    ? 'VirtualRide' : record.sport_type;
   if (typeof sport !== 'string' || !/^[A-Za-z][A-Za-z0-9]*$/.test(sport) ||
       typeof record.start_date !== 'string' || !/(?:Z|[+-]\d\d:\d\d)$/.test(record.start_date) || !Number.isFinite(Date.parse(record.start_date)) ||
       !Number.isSafeInteger(record.moving_time) || record.moving_time < 0) throw new Error('Strava 活动不完整');

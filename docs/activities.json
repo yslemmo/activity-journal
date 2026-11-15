@@ -2,17 +2,28 @@
   "sourcePolicyVersion": 2,
   "period": {
     "start": "2021-01-01",
-    "end": "2026-11-14"
+    "end": "2026-11-15"
   },
-  "syncedAt": "2026-11-14 18:36:40 +08:00",
+  "syncedAt": "2026-11-15 16:19:15 +08:00",
   "activities": [
+    {
+      "date": "2026-11-15",
+      "startTime": "08:30:00",
+      "sport": "Ride",
+      "distanceKm": 118.563,
+      "durationSeconds": 17920,
+      "elevationGain": 771,
+      "trainingLoad": 172,
+      "stravaUrl": "https://www.strava.com/activities/20993081955",
+      "activityUrl": "https://intervals.icu/activities/i210220245"
+    },
     {
       "date": "2026-11-14",
       "startTime": "08:26:48",
       "sport": "Ride",
       "distanceKm": 188.376,
       "durationSeconds": 25718,
-      "elevationGain": 1125,
+      "elevationGain": 1614.1,
       "trainingLoad": 280,
       "stravaUrl": "https://www.strava.com/activities/20981869497",
       "activityUrl": "https://intervals.icu/activities/i209846731"
@@ -5866,12 +5877,12 @@
       {
         "name": "迪卡侬EDRcf V2",
         "type": "Bike",
-        "distanceKm": 12411.368,
+        "distanceKm": 12460.118,
         "components": [
           {
             "name": "Rival飞轮",
             "type": "Cassette",
-            "distanceKm": 12220.296,
+            "distanceKm": 12338.859,
             "replacement": {
               "status": "missing-reminder",
               "date": null,
@@ -5881,27 +5892,27 @@
           {
             "name": "后胎（米其林PowerCup）",
             "type": "Tyre",
-            "distanceKm": 1641.5548999999999,
+            "distanceKm": 1760.1176,
             "replacement": {
               "status": "available",
               "date": "2026-11-02",
-              "distanceKm": 678.1849
+              "distanceKm": 796.7475999999999
             }
           },
           {
             "name": "前胎（米其林PowerCup）",
             "type": "Tyre",
-            "distanceKm": 4074.0948,
+            "distanceKm": 4192.6575,
             "replacement": {
               "status": "available",
               "date": "2026-11-02",
-              "distanceKm": 678.18475
+              "distanceKm": 796.7475
             }
           },
           {
             "name": "Rival链条",
             "type": "Chain",
-            "distanceKm": 12220.296,
+            "distanceKm": 12338.859,
             "replacement": {
               "status": "missing-reminder",
               "date": null,
@@ -5911,19 +5922,19 @@
           {
             "name": "RCR锁鞋",
             "type": "CyclingShoes",
-            "distanceKm": 9736.186,
+            "distanceKm": 9854.749,
             "replacement": null
           },
           {
             "name": "左",
             "type": "Cleats",
-            "distanceKm": 9736.186,
+            "distanceKm": 9854.749,
             "replacement": null
           },
           {
             "name": "右",
             "type": "Cleats",
-            "distanceKm": 678.1849,
+            "distanceKm": 796.7475999999999,
             "replacement": null
           }
         ]

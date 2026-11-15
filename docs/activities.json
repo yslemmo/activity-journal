@@ -4,7 +4,7 @@
     "start": "2021-01-01",
     "end": "2026-11-15"
   },
-  "syncedAt": "2026-11-15 16:19:15 +08:00",
+  "syncedAt": "2026-11-15 16:24:42 +08:00",
   "activities": [
     {
       "date": "2026-11-15",
@@ -12,7 +12,7 @@
       "sport": "Ride",
       "distanceKm": 118.563,
       "durationSeconds": 17920,
-      "elevationGain": 771,
+      "elevationGain": 1016.1,
       "trainingLoad": 172,
       "stravaUrl": "https://www.strava.com/activities/20993081955",
       "activityUrl": "https://intervals.icu/activities/i210220245"

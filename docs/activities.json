@@ -2,10 +2,21 @@
   "sourcePolicyVersion": 2,
   "period": {
     "start": "2021-01-01",
-    "end": "2026-11-15"
+    "end": "2026-11-16"
   },
-  "syncedAt": "2026-11-15 16:24:42 +08:00",
+  "syncedAt": "2026-11-16 17:23:00 +08:00",
   "activities": [
+    {
+      "date": "2026-11-16",
+      "startTime": "14:11:37",
+      "sport": "Hike",
+      "distanceKm": 6.1907,
+      "durationSeconds": 7037,
+      "elevationGain": 231,
+      "trainingLoad": 11,
+      "stravaUrl": "https://www.strava.com/activities/21006152218",
+      "activityUrl": "https://intervals.icu/activities/i210672953"
+    },
     {
       "date": "2026-11-15",
       "startTime": "08:30:00",
@@ -5877,7 +5888,7 @@
       {
         "name": "迪卡侬EDRcf V2",
         "type": "Bike",
-        "distanceKm": 12460.118,
+        "distanceKm": 12341.554,
         "components": [
           {
             "name": "Rival飞轮",

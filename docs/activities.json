@@ -2,10 +2,21 @@
   "sourcePolicyVersion": 2,
   "period": {
     "start": "2021-01-01",
-    "end": "2026-11-16"
+    "end": "2026-11-18"
   },
-  "syncedAt": "2026-11-16 17:23:00 +08:00",
+  "syncedAt": "2026-11-18 17:10:08 +08:00",
   "activities": [
+    {
+      "date": "2026-11-18",
+      "startTime": "15:44:41",
+      "sport": "Run",
+      "distanceKm": 15.0182,
+      "durationSeconds": 4798,
+      "elevationGain": 33,
+      "trainingLoad": 119,
+      "stravaUrl": "https://www.strava.com/activities/21031619830",
+      "activityUrl": "https://intervals.icu/activities/i211562799"
+    },
     {
       "date": "2026-11-16",
       "startTime": "14:11:37",
